@@ -19,7 +19,7 @@ module.exports = function(env) {
 
     var settings = {
         defaultStackParams: {
-            Region: 'us-west-2',
+            Region: 'us-east-1',
             ConfigurationManager: {
                 Name: 'Chef',
                 Version: '11.10'
@@ -29,7 +29,7 @@ module.exports = function(env) {
             UseCustomCookbooks: true,
             CustomCookbooksSource: {
                 Type: 'git',
-                Url: 'https://github.com/ykhati/ChefRepo.git'
+                Url: 'https://github.com/mpalkhade/ChefRepo.git'
             },
             UseOpsworksSecurityGroups: true,
             DefaultSshKeyName: 'sapana_aws_new'
@@ -54,8 +54,8 @@ module.exports = function(env) {
             Type: 'java',
             AppSource: {
               Type: 'git',
-              Url: 'https://github.com/ykhati/Opsworks.git',
-              Username: 'ykhati'
+              Url: 'https://github.com/mpalkhade/Opsworks.git',
+              Username: 'mpalkhade'
             },
             EnableSsl: false
         },
