@@ -7,7 +7,7 @@ var appName = process.argv[2];
 var environment = process.argv[3];
 
 if (!_.isUndefined(appName) && !_.isUndefined(environment)) {
-    var creds = new AWS.SharedIniFileCredentials({profile: 'default'});
+    var creds = new AWS.SharedIniFileCredentials({profile: 'manoj'});
     AWS.config.credentials = creds;
     AWS.config.region = 'us-east-1';
 
