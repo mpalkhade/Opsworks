@@ -4,15 +4,16 @@ module.exports = function(env) {
 
     var customJson = {
       "opsworks_java": {
-      "jvm_version": 8,
-      "java_app_server_version": 8
-      },
+        "jvm_version": 8,
+        "java_app_server_version": 8
+      }
+      /*,
       "custom_env": {
         "gigya-qa": {
           "type": "java",
           "jar": "B2BPlatformServices-1.0.0.RELEASE.jar"
         }
-      }
+      }*/
     }
 
     var customJsonString = JSON.stringify(customJson) ;
@@ -38,9 +39,10 @@ module.exports = function(env) {
         /* Layer Default Settings */
         defaultLayerParams: {
             Type: 'java-app',
+            /*
             CustomRecipes: {
                 Deploy: [ 'java::deploy' ]
-            },
+            },*/
             AutoAssignElasticIps: false,
             AutoAssignPublicIps: true,
             EnableAutoHealing: true,
@@ -49,7 +51,7 @@ module.exports = function(env) {
             CustomJson: customJsonString
         },
 
-        /* Yogesh - App Default Settings */
+        /* Yogesh - App Default Settings
         defaultAppParams: {
             Type: 'java',
             AppSource: {
@@ -58,7 +60,7 @@ module.exports = function(env) {
               Username: 'mpalkhade'
             },
             EnableSsl: false
-        },
+        },*/
 
         /* Default Instance Settings */
         defaultInstanceParams: {
